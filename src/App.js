@@ -1,15 +1,18 @@
-import React from 'react';
-import './App.css';
-import Layout from './hoc/layout/Layout';
+import React from "react";
+import "./App.css";
+import { BrowserRouter } from "react-router-dom";
+import Layout from "./hoc/layout/Layout";
 
 function App() {
-  const fill ="hii ajay";
+  const fill = "hii ajay";
   return (
     <div className="App">
-     <Layout>
-       {fill}
-       <p>Test Burger King</p>
-     </Layout>
+      <BrowserRouter>
+        <Layout>
+          {fill}
+          <p>Test Burger King</p>
+        </Layout>
+      </BrowserRouter>
     </div>
   );
 }
