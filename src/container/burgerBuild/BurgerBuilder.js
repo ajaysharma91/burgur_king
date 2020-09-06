@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import Aux from "../../hoc/Aux";
+// import Aux from "../Aux";
 import Burger from "../../components/Burger/Burger";
 import BuildControls from "../../components/Burger/BuildControls/BuildControls";
 import "./BurgerBuilder.css";
 import Model from "../../components/UI/Model/Model";
 import OrderSummary from "../../components/Burger/OrderSummary/OrderSummary";
-import axios from "../../hoc/axios-order";
-import Spinner from "../../components/UI/Spinners/spinner";
+import axios from "../../axios-order";
+import Spinner from "../../components/UI/spinner";
 const INGREDIENT_PRICE = {
   cheese: 0.5,
   meat: 1.0,
@@ -147,7 +147,7 @@ class BurgerBuilder extends Component {
     orderSummary = <Spinner/>;
   }
     return (
-      <Aux>
+      <>
         <Model
           show={this.state.purchasing}
           purchaseClosed={this.purchasingCancelHandle}
@@ -165,7 +165,7 @@ class BurgerBuilder extends Component {
           puchasable={this.state.puchasable}
           ordered={this.purchaseHandler}
         ></BuildControls>
-      </Aux>
+      </>
     );
   }
 }

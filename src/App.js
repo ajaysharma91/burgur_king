@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter } from "react-router-dom";
-import Layout from "./hoc/layout/Layout";
+import Layout from "./Layout";
 
 function App() {
   const fill = "hii ajay";

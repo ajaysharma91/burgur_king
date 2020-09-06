@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Aux from '../Aux';
-import BurgerBuilder from '../../container/burgerBuild/BurgerBuilder';
-import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
-import SideDrower from '../../components/Navigation/SideDrower/SideDrower';
-import Checkout from '../../container/burgerBuild/Checkout/Checkcout';
+// import Aux from './Aux';
+import BurgerBuilder from './container/burgerBuild/BurgerBuilder';
+import Toolbar from './components/Navigation/Toolbar/Toolbar';
+import SideDrower from './components/Navigation/SideDrower/SideDrower';
+import Checkout from './container/burgerBuild/Checkcout';
 import {Route, Switch} from 'react-router-dom';
-import Orders from '../../container/Orders/Orders';
+import Orders from '../src/Orders';
 class Layout extends Component{
     state = {
         sideDrowerHandler:false
@@ -20,7 +20,7 @@ class Layout extends Component{
     }
     render(){
         return(
-            <Aux>
+            <>
             <Toolbar sideDrowerToggle={this.sideDrowerToggleHandler}></Toolbar>
             <SideDrower open={this.state.sideDrowerHandler} clicked={this.sideDrowerhandlerFunction}/>
             <main>
@@ -30,7 +30,7 @@ class Layout extends Component{
                 <Route path="/checkout" component={Checkout} /> 
                 </Switch>
             </main>
-        </Aux>
+        </>
         )
     }
 }

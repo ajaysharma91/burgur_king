@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Route} from 'react-router-dom';
-import CheckoutData from './CheckoutData/CheckoutData';
+import CheckoutData from '../burgerBuild/Checkout/CheckoutData';
 import CheckoutSummary from './CheckoutSummary';
 class Checkout extends Component{
     state = {

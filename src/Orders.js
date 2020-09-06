@@ -1,6 +1,6 @@
 import React from 'react'
-import Order from '../../components/Order/Order';
-import axios  from '../../hoc/axios-order';
+import Order from '../src/components/Order';
+import axios  from './axios-order';
 class Orders extends React.Component{
     state={
         orders:[],
